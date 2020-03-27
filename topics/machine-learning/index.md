@@ -1,9 +1,9 @@
 ---
 aliases: machine-learning-algorithms, machine-learning-library, machine-learning-application,
-  machine-learning-models, machinelearning, ml
+  machine-learning-models
 display_name: Machine learning
 short_description: Machine learning is a way of modeling and interpreting data that
-  allows a piece of software to respond intelligently.
+  allows a piece of software to respond intelligently to a situation.
 topic: machine-learning
 wikipedia_url: https://en.wikipedia.org/wiki/Machine_learning
 ---
