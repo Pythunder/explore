@@ -1,6 +1,7 @@
 require "minitest/autorun"
 require "rmagick"
 require "yaml"
+require "octokit"
 
 IMAGE_EXTENSIONS = %w[.jpg .jpeg .png].freeze
 IMAGE_WIDTH = 288
@@ -56,4 +57,9 @@ def body_for(topic)
   return "" unless parts.size >= 2
 
   parts[2]
+end
+
+MiniTest.after_run do
+  warn "Repo checks were rate limited during this CI run" if NewOctokit.repos_skipped?
+  warn "User checks were rate limited during this CI run" if NewOctokit.users_skipped?
 end
